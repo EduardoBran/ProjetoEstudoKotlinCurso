@@ -1,19 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Hello World!" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- LinearLayout orientacao horizontal, os texto ficam horizontal -->
+    <!-- LinearLayout orientacao vertical, os texto ficam vertical -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- LinearLayout orientacao vertical com peso 1 e 2 na vertical -->
+        <!-- Também é possível fazer na horizontal alterando para match_parent do LinearLayout -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Hello World 1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Hello World 2" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+    <!-- LinearLayout por padrão vem na horizontal, nesta aula foi colocado vertical
+         Depois será visto o conceito de responsivo. Por enquanto somente elementos
+         visíveis na tela.
+
+         Cada LinearLayoyut criado precisa obrigatoriamente declarar android:layout_width
+         e android:layout_height.
+
+         wrap_content
+            - A View “encolhe” até caber exatamente no seu conteúdo.
+            Exemplo: um TextView com android:layout_width="wrap_content" vai ter largura
+                     suficiente apenas para mostrar o texto interno, sem preencher espaço vazio.
+
+         match_parent
+            - A View expande para preencher t0do o espaço disponível no “pai”
+              (o container que a engloba).
+            Exemplo: se um LinearLayout tem 300 dp de largura e você coloca um botão com
+                     android:layout_width="match_parent", esse botão ficará também com 300 dp
+                     de largura, ocupando tudo.
+
+          O LinearLayout consegue distribuir os elementos dentro dele através de um peso.
+
+         -->
