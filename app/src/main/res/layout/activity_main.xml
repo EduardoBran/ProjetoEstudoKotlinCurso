@@ -39,25 +39,26 @@
 
 </LinearLayout>
 
-    <!-- LinearLayout por padrão vem na horizontal, nesta aula foi colocado vertical
-         Depois será visto o conceito de responsivo. Por enquanto somente elementos
-         visíveis na tela.
+<!--
+LinearLayout por padrão vem na horizontal, nesta aula foi colocado vertical
+Depois será visto o conceito de responsivo. Por enquanto somente elementos
+visíveis na tela.
 
-         Cada LinearLayoyut criado precisa obrigatoriamente declarar android:layout_width
-         e android:layout_height.
+Cada LinearLayoyut criado precisa obrigatoriamente declarar android:layout_width
+e android:layout_height.
 
-         wrap_content
-            - A View “encolhe” até caber exatamente no seu conteúdo.
-            Exemplo: um TextView com android:layout_width="wrap_content" vai ter largura
-                     suficiente apenas para mostrar o texto interno, sem preencher espaço vazio.
+wrap_content
+   - A View “encolhe” até caber exatamente no seu conteúdo.
+   Exemplo: um TextView com android:layout_width="wrap_content" vai ter largura
+            suficiente apenas para mostrar o texto interno, sem preencher espaço vazio.
 
-         match_parent
-            - A View expande para preencher t0do o espaço disponível no “pai”
-              (o container que a engloba).
-            Exemplo: se um LinearLayout tem 300 dp de largura e você coloca um botão com
-                     android:layout_width="match_parent", esse botão ficará também com 300 dp
-                     de largura, ocupando tudo.
+match_parent
+   - A View expande para preencher t0do o espaço disponível no “pai”
+     (o container que a engloba).
+     Exemplo: se um LinearLayout tem 300 dp de largura e você coloca um botão com
+              android:layout_width="match_parent", esse botão ficará também com 300 dp
+             de largura, ocupando tudo.
 
-          O LinearLayout consegue distribuir os elementos dentro dele através de um peso.
+O LinearLayout consegue distribuir os elementos dentro dele através de um peso "layout_weight".
 
-         -->
+-->
