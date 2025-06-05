@@ -1,6 +1,5 @@
 package com.luizeduardobrandao.projetocurso
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
@@ -8,34 +7,21 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class MainActivity : AppCompatActivity() {
+class Exercicio1 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
-
+        setContentView(R.layout.exercicio1)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        // 1. Recupera os botões pelo ID
-        val btn1 = findViewById<Button>(R.id.btnExercicio1)
-        val btn2 = findViewById<Button>(R.id.btnExercicio2)
-
-        // 2. Define a ação de click para cada botão
-        btn1.setOnClickListener {
-            // Inicia Exercicio1Activity
-            val intent = Intent(this, Exercicio1::class.java)
-            startActivity(intent)
+        // Pega o botão “Voltar” do layout e, ao clicar, encerra esta Activity
+        val btnVoltar = findViewById<Button>(R.id.btnVoltar)
+        btnVoltar.setOnClickListener {
+            finish()
         }
-
-        btn2.setOnClickListener {
-            // Inicia Exercicio2Activity
-            val intent = Intent(this, Exercicio2::class.java)
-            startActivity(intent)
-        }
-
     }
 }
