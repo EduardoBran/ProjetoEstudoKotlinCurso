@@ -11,31 +11,96 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="16dp"
         android:text="Hello World!" />
 
-    <!-- LinearLayout orientacao horizontal, os texto ficam horizontal -->
-    <!-- LinearLayout orientacao vertical, os texto ficam vertical -->
-    <LinearLayout
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@color/black"
+        android:padding="16dp"
+        android:text="Hello World! 2"
+        android:textColor="#757575" />
+
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="Hello World 2"
+        android:textColor="#757575" />
 
-        <!-- LinearLayout orientacao vertical com peso 1 e 2 na vertical -->
-        <!-- Também é possível fazer na horizontal alterando para match_parent do LinearLayout -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:text="Hello World 1" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:background="@color/black"
+        android:padding="16dp"
+        android:text="Hello World 3"
+        android:textColor="@color/green" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:text="Hello World 2" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:background="@color/black"
+        android:text="Hello World 4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/amarante"
+        android:padding="16dp"
+        android:textColor="@color/green"
+        android:textAllCaps="true"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:text="Hello World 5"
+
+        />
 
 
-    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--    &lt;!&ndash; LinearLayout orientacao horizontal, os texto ficam horizontal &ndash;&gt;-->
+<!--    &lt;!&ndash; LinearLayout orientacao vertical, os texto ficam vertical &ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:orientation="vertical">-->
+
+<!--        &lt;!&ndash; LinearLayout orientacao vertical com peso 1 e 2 na vertical &ndash;&gt;-->
+<!--        &lt;!&ndash; Também é possível fazer na horizontal alterando para match_parent do LinearLayout &ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="Hello World 1" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="Hello World 2" />-->
+
+<!--    </LinearLayout>-->
 
 </LinearLayout>
 
@@ -48,17 +113,36 @@ Cada LinearLayoyut criado precisa obrigatoriamente declarar android:layout_width
 e android:layout_height.
 
 wrap_content
-   - A View “encolhe” até caber exatamente no seu conteúdo.
+   - Faz a View “caber” exatamente no seu conteúdo.
    Exemplo: um TextView com android:layout_width="wrap_content" vai ter largura
             suficiente apenas para mostrar o texto interno, sem preencher espaço vazio.
 
 match_parent
-   - A View expande para preencher t0do o espaço disponível no “pai”
-     (o container que a engloba).
+   - A View expande para preencher t0do o espaço disponível no “pai”faz a View ocupar t0do o
+     espaço disponível do pai, respeitando margens e paddings.
      Exemplo: se um LinearLayout tem 300 dp de largura e você coloca um botão com
               android:layout_width="match_parent", esse botão ficará também com 300 dp
              de largura, ocupando tudo.
 
 O LinearLayout consegue distribuir os elementos dentro dele através de um peso "layout_weight".
 
+paddingStart = esquerda da direita (paddingLeft)
+paddingEnd   = direita da esquerda (paddingRight)
+
+gravity com match_parent      = gravidty="center" - centraliza
+gravity                       = gravidty="left"   - alinha esquerda
+gravity                       = gravidty="right"  - alinha direita
+
+gravity = alinha o conteúdo (texto, filhos) dentro da própria View.
+layout_gravity = alinha a View dentro de seu container (pai).
+Usado dentro do LinearLayout, todos os filhos ficam centralizados.
+
+visibility="invisible" = elemento invisível mais ainda ocupando a posição
+visibility="gone" = elemento vai embora
+
+fontFamily - altera a fonte do texto
+textColor - cor do texto
+textAllcapz = tudo maiusculo
+textSize = aumenta fonte do texto (usar sp)
+textStyle = estilo (negrito, itálico) -> usar os dois ao mesmo tempo "italic|bold"
 -->
