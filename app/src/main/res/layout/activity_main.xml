@@ -9,62 +9,61 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:padding="16dp"
         android:text="Hello World!" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:background="@color/black"
-        android:padding="16dp"
-        android:text="Hello World! 2"
-        android:textColor="#757575" />
-
-    <TextView
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/black"
-        android:gravity="center"
-        android:padding="16dp"
-        android:text="Hello World 2"
-        android:textColor="#757575" />
+        android:autofillHints="Nome"
+        android:hint="Digite seu nome"
+        android:inputType="text"/>
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:autofillHints="password"
+        android:hint="Senha"
         android:layout_marginTop="8dp"
-        android:background="@color/black"
-        android:padding="16dp"
-        android:text="Hello World 3"
-        android:textColor="@color/green" />
+        android:inputType="textPassword"/>
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
+        android:importantForAutofill="no"
+        android:hint="Valor"
         android:layout_marginTop="8dp"
-        android:layout_gravity="center"
-        android:visibility="gone"
-        android:background="@color/black"
-        android:text="Hello World 4" />
+        android:inputType="number"/>
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:importantForAutofill="no"
+        android:hint="Texto com lupa"
         android:layout_marginTop="8dp"
-        android:fontFamily="@font/amarante"
-        android:padding="16dp"
-        android:textColor="@color/green"
-        android:textAllCaps="true"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:text="Hello World 5"
+        android:inputType="text"
+        android:imeOptions="actionSearch"/>
 
-        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:importantForAutofill="no"
+        android:hint="Aceita texto e numero"
+        android:layout_marginTop="8dp"
+        android:inputType="text|textMultiLine"
+        android:imeOptions="actionDone"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:importantForAutofill="no"
+        android:hint="Só aceita lertra A"
+        android:layout_marginTop="8dp"
+        android:digits="A"
+        android:imeOptions="actionDone"/>
 
 
 
@@ -79,8 +78,10 @@
 
 
 
-<!--    &lt;!&ndash; LinearLayout orientacao horizontal, os texto ficam horizontal &ndash;&gt;-->
-<!--    &lt;!&ndash; LinearLayout orientacao vertical, os texto ficam vertical &ndash;&gt;-->
+<!--                     LinearLayout                  -->
+
+<!--   LinearLayout orientacao horizontal, os texto ficam horizontal -->
+<!--   LinearLayout orientacao vertical, os texto ficam vertical -->
 <!--    <LinearLayout-->
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="match_parent"-->
@@ -101,6 +102,124 @@
 <!--            android:text="Hello World 2" />-->
 
 <!--    </LinearLayout>-->
+
+
+
+
+<!--                     Atributos comuns do Layout                 -->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:padding="16dp"-->
+<!--        android:text="Hello World!" />-->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="16dp"-->
+<!--        android:background="@color/black"-->
+<!--        android:padding="16dp"-->
+<!--        android:text="Hello World! 2"-->
+<!--        android:textColor="#757575" />-->
+
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@color/black"-->
+<!--        android:gravity="center"-->
+<!--        android:padding="16dp"-->
+<!--        android:text="Hello World 2"-->
+<!--        android:textColor="#757575" />-->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:background="@color/black"-->
+<!--        android:padding="16dp"-->
+<!--        android:text="Hello World 3"-->
+<!--        android:textColor="@color/green" />-->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:padding="16dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:visibility="gone"-->
+<!--        android:background="@color/black"-->
+<!--        android:text="Hello World 4" />-->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:fontFamily="@font/amarante"-->
+<!--        android:padding="16dp"-->
+<!--        android:textColor="@color/green"-->
+<!--        android:textAllCaps="true"-->
+<!--        android:textSize="24sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:text="Hello World 5" />
+-->
+
+
+
+<!--                 Edit Text                -->
+
+<!--    <EditText-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:autofillHints="Nome"-->
+<!--        android:hint="Digite seu nome"-->
+<!--        android:inputType="text"/>-->
+
+<!--    <EditText-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:autofillHints="password"-->
+<!--        android:hint="Senha"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:inputType="textPassword"/>-->
+
+<!--    <EditText-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:importantForAutofill="no"-->
+<!--        android:hint="Valor"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:inputType="number"/>-->
+
+<!--    <EditText-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:importantForAutofill="no"-->
+<!--        android:hint="Texto com lupa"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:inputType="text"-->
+<!--        android:imeOptions="actionSearch"/>-->
+
+<!--    <EditText-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:importantForAutofill="no"-->
+<!--        android:hint="Aceita texto e numero"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:inputType="text|textMultiLine"-->
+<!--        android:imeOptions="actionDone"/>-->
+
+<!--    <EditText-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:importantForAutofill="no"-->
+<!--        android:hint="Só aceita lertra A"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:digits="A"-->
+<!--        android:imeOptions="actionDone"/>-->
+
+
 
 </LinearLayout>
 
@@ -126,6 +245,7 @@ match_parent
 
 O LinearLayout consegue distribuir os elementos dentro dele através de um peso "layout_weight".
 
+
 paddingStart = esquerda da direita (paddingLeft)
 paddingEnd   = direita da esquerda (paddingRight)
 
@@ -145,4 +265,16 @@ textColor - cor do texto
 textAllcapz = tudo maiusculo
 textSize = aumenta fonte do texto (usar sp)
 textStyle = estilo (negrito, itálico) -> usar os dois ao mesmo tempo "italic|bold"
+
+
+EditText - possibilidade do usuário entrar com um texto e lermos a partir desta informação
+autofillHints - informa ao sistema que tipo de informação esperada
+importantForAutofill="n" - sistema nao faz sugestões do que preencher
+hint - texto que exiba ao usuário o que ele deve esperar para escrever no editext
+inputType - tipo de informação que será esperada na caixa de texto
+          - pode usar mais de um atrbuto como text|textMultiLine (aceita texto e numero)
+imeOptions - modifica o ícone que aparece no teclado
+             "search" aparece lupa, "actionNext" aparece setinha para próximo
+             "actionDone" - ação feita
+digits - restringe o que pode ser aceito
 -->
