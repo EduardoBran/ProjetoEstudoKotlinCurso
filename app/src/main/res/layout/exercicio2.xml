@@ -1,27 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:background="@color/cinzaClaro"
+    android:orientation="vertical">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Tela do Exercício 2"
-        android:textSize="24sp"
-        android:gravity="center"
-        android:layout_marginBottom="16dp" />
+        android:layout_height="match_parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/roxoClaro"
+        android:orientation="vertical"
+        android:padding="8dp">
 
-    <Button
-        android:id="@+id/btnVoltar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_gravity="center"
-        android:text="Voltar" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="40dp"
+            android:text="Seguros XPTO"
+            android:textSize="32dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Serviços"
+            android:textSize="24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Automóveis"
+                android:textStyle="bold|italic"
+                android:padding="32dp"
+                android:background="@color/cinzaEscuro"/>
+
+            <View
+                android:layout_width="8dp"
+                android:layout_height="0dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Imóveis"
+                android:textStyle="bold|italic"
+                android:padding="32dp"
+                android:background="@color/cinzaEscuro"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Novidades"
+            android:textSize="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descontos de 5% ao assinar esse mês!"
+            android:textSize="16dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Precisa de ajuda?"
+            android:textSize="24dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Entre em contato" />
+
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="80dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/voltar"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
 
     <!-- Coloque aqui os componentes do Exercício 2 -->
 </LinearLayout>

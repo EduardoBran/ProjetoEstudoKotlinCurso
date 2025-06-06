@@ -3,4 +3,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="green">#4CAF50</color>
+    <color name="azulEsverdeado">#009688</color>
+    <color name="roxo">#673AB7</color>
+    <color name="roxoClaro">#E5DAF6</color>
+    <color name="cinzaEscuro">#949393</color>
+    <color name="cinzaClaro">#E2D9D9</color>
 </resources>

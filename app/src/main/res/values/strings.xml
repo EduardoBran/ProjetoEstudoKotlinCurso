@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">ProjetoCurso</string>
     <string name="BotaoIniciar">Clique Aqui</string>
+    <string name="login">Login</string>
+    <string name="senha">Senha</string>
+    <string name="cadastro">Cadastro</string>
+    <string name="voltar">Voltar</string>
+    <string name="email">E-mail</string>
 </resources>

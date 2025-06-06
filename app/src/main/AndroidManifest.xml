@@ -15,6 +15,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
+            <!--> Primeira Tela que aplicativo abre -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
