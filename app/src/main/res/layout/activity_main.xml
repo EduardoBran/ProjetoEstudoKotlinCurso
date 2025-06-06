@@ -264,5 +264,17 @@ CRIA NOVO LAYOUT
 - clicar com botão direito no diretório layout < Activity < Empty Views Activity
 
 
+CUSTOMIZAÇÃO DE TEMA
+
+acessar https://material-foundation.github.io/material-theme-builder/ < escolher source image
+< clicar em pick your fonts < Export theme < Export
+Descompactra o arquivo.
+  - Na pasta values, copiar t0do o conteudo de colors.xml do arquivo e colar em colors.xml
+  - Na pasta values, copiar t0do o conteudo de themes.xml e colar dentro do primeiro <style> de themes.xml
+  - Na pasta values-night, copiar  copiar t0do o conteudo de themes.xml e colar dentro do primeiro <style> de themes.xml (night)
+  - Para cores modo noturno, clicar com botão direito em values < New < Values Resource Files
+      - Selecionar Night e adicionar a a direita, mudar para night e dar ok.
+
+
 
 -->

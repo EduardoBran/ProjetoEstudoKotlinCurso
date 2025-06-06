@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,7 +11,6 @@
         android:layout_height="match_parent"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        android:background="@color/roxoClaro"
         android:orientation="vertical"
         android:padding="8dp">
 
@@ -20,13 +20,13 @@
             android:layout_gravity="center"
             android:layout_margin="40dp"
             android:text="Seguros XPTO"
-            android:textSize="32dp" />
+            android:textSize="32sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Serviços"
-            android:textSize="24dp" />
+            android:textSize="24sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -59,13 +59,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Novidades"
-            android:textSize="24dp" />
+            android:textSize="24sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Descontos de 5% ao assinar esse mês!"
-            android:textSize="16dp" />
+            android:textSize="16sp" />
 
         <View
             android:layout_width="0dp"
@@ -75,7 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Precisa de ajuda?"
-            android:textSize="24dp" />
+            android:textSize="24sp" />
 
         <Button
             android:layout_width="wrap_content"
