@@ -6,4 +6,11 @@
     </style>
 
     <style name="Theme.ProjetoCurso" parent="Base.Theme.ProjetoCurso" />
+
+    <style name="TextViewStyleEx2">
+        <item name="android:background">@color/cinzaEscuro</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">32dp</item>
+        <item name="android:textStyle">bold|italic</item>
+    </style>
 </resources>

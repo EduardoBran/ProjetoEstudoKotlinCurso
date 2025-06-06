@@ -3,7 +3,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cinzaClaro"
     android:orientation="vertical">
 
     <LinearLayout
@@ -36,28 +35,22 @@
             android:padding="8dp">
 
             <TextView
+                style="@style/TextViewStyleEx2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:text="Automóveis"
-                android:textStyle="bold|italic"
-                android:padding="32dp"
-                android:background="@color/cinzaEscuro"/>
+                android:text="Automóveis" />
 
             <View
                 android:layout_width="8dp"
                 android:layout_height="0dp" />
 
             <TextView
+                style="@style/TextViewStyleEx2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:text="Imóveis"
-                android:textStyle="bold|italic"
-                android:padding="32dp"
-                android:background="@color/cinzaEscuro"/>
+                android:text="Imóveis" />
 
         </LinearLayout>
 
