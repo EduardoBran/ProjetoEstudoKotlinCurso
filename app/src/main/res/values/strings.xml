@@ -6,4 +6,5 @@
     <string name="cadastro">Cadastro</string>
     <string name="voltar">Voltar</string>
     <string name="email">E-mail</string>
+    <string name="data_validation">Informe os dados!</string>
 </resources>

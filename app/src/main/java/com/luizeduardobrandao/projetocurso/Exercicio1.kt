@@ -1,9 +1,11 @@
 package com.luizeduardobrandao.projetocurso
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -54,6 +56,18 @@ class Exercicio1 : AppCompatActivity(), View.OnClickListener {
             R.id.button_login -> {
                 val email = binding.edittextEmail.text.toString()
                 val password = binding.edittextPassword.text.toString()
+
+                // validação dos dados
+                if (email.isNotEmpty() && password.isNotEmpty()){
+                    // Navegação
+                    val intent = Intent(this, Exercicio1HomeActivity::class.java)
+                    startActivity(intent)
+
+                }
+                else{
+                    Toast.makeText(this, "Informe os dados!", Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(this, R.string.data_validation, Toast.LENGTH_SHORT).show()
+                }
             }
 
             R.id.button_register -> {

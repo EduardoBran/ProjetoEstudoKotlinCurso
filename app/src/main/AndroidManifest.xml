@@ -13,20 +13,22 @@
         android:theme="@style/Theme.ProjetoCurso"
         tools:targetApi="31">
         <activity
+            android:name=".Exercicio1HomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
-            <!--> Primeira Tela que aplicativo abre -->
+
+            <!-- > Primeira Tela que aplicativo abre -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".Exercicio1"
             android:exported="false" />
-
         <activity
             android:name=".Exercicio2"
             android:exported="false" />
