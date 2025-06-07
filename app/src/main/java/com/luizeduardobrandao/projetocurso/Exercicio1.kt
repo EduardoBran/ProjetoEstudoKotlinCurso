@@ -59,8 +59,14 @@ class Exercicio1 : AppCompatActivity(), View.OnClickListener {
 
                 // validação dos dados
                 if (email.isNotEmpty() && password.isNotEmpty()){
+
+                    // Passando valores
+                    val bundle = Bundle()
+                    bundle.putString("EMAIL", email)
+
                     // Navegação
                     val intent = Intent(this, Exercicio1HomeActivity::class.java)
+                    intent.putExtras(bundle)
                     startActivity(intent)
 
                 }
