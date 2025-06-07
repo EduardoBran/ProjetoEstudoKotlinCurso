@@ -33,6 +33,11 @@ android {
     kotlinOptions {
         jvmTarget = "21"
     }
+
+    // configuração buscar elementos
+    buildFeatures{
+        viewBinding = true
+    }
 }
 
 dependencies {
