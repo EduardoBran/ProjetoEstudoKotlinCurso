@@ -1,31 +1,34 @@
-package com.luizeduardobrandao.projetocurso
+package com.luizeduardobrandao.projetocurso.ui
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.luizeduardobrandao.projetocurso.databinding.ActivityMainBinding
-import com.luizeduardobrandao.projetocurso.databinding.Exercicio1Binding
+import com.luizeduardobrandao.projetocurso.utils.AppConstants
+import com.luizeduardobrandao.projetocurso.R
+import com.luizeduardobrandao.projetocurso.business.UserBusiness
+import com.luizeduardobrandao.projetocurso.databinding.ActivityExercicio1Binding
+import com.luizeduardobrandao.projetocurso.databinding.ActivityExercicio1HomeBinding
+import com.luizeduardobrandao.projetocurso.databinding.ActivityExercicio1RegisterBinding
 
 class Exercicio1 : AppCompatActivity(), View.OnClickListener {
 
-    private lateinit var binding: Exercicio1Binding
+    private lateinit var binding: ActivityExercicio1Binding
+    private val userBusiness = UserBusiness()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        binding = Exercicio1Binding.inflate(layoutInflater)
+        binding = ActivityExercicio1Binding.inflate(layoutInflater)
 
         setContentView(binding.root)
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.exercicio1)) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
@@ -47,8 +50,6 @@ class Exercicio1 : AppCompatActivity(), View.OnClickListener {
         binding.buttonLogin.setOnClickListener(this)
         binding.buttonRegister.setOnClickListener(this)
         binding.btnVoltar.setOnClickListener(this)
-
-
     }
 
     override fun onClick(v: View) {
@@ -58,26 +59,43 @@ class Exercicio1 : AppCompatActivity(), View.OnClickListener {
                 val password = binding.edittextPassword.text.toString()
 
                 // validação dos dados
-                if (email.isNotEmpty() && password.isNotEmpty()){
+                if (userBusiness.checkCredentials(email, password)) {
 
-                    // Passando valores
+                    // Preparando Valores Para Passar
                     val bundle = Bundle()
-                    bundle.putString("EMAIL", email)
+                    bundle.putString(AppConstants.EMAIL_KEY, email)
 
                     // Navegação
                     val intent = Intent(this, Exercicio1HomeActivity::class.java)
-                    intent.putExtras(bundle)
+                    intent.putExtras(bundle) // passando valores
                     startActivity(intent)
 
-                }
-                else{
+                } else {
                     Toast.makeText(this, "Informe os dados!", Toast.LENGTH_SHORT).show()
                     //Toast.makeText(this, R.string.data_validation, Toast.LENGTH_SHORT).show()
                 }
             }
 
-            R.id.button_register -> {
+            R.id.button_register ->{
+                val email = binding.edittextEmail.text.toString()
+                val password = binding.edittextPassword.text.toString()
 
+                // validação dos dados
+                if (userBusiness.checkCredentials(email, password)) {
+
+                    // Preparando Valores Para Passar
+                    val bundle = Bundle()
+                    bundle.putString(AppConstants.REGISTER_KEY, email)
+
+                    // Navegação
+                    val intent = Intent(this, Exercicio1RegisterActivity::class.java)
+                    intent.putExtras(bundle) // passando valores
+                    startActivity(intent)
+
+                } else {
+                    Toast.makeText(this, "Informe os dados!", Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(this, R.string.data_validation, Toast.LENGTH_SHORT).show()
+                }
             }
 
             R.id.btnVoltar -> finish()

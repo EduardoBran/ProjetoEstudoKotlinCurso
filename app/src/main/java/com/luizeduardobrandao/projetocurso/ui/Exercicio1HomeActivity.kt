@@ -1,10 +1,12 @@
-package com.luizeduardobrandao.projetocurso
+package com.luizeduardobrandao.projetocurso.ui
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.luizeduardobrandao.projetocurso.utils.AppConstants
+import com.luizeduardobrandao.projetocurso.R
 import com.luizeduardobrandao.projetocurso.databinding.ActivityExercicio1HomeBinding
 
 class Exercicio1HomeActivity : AppCompatActivity() {
@@ -24,10 +26,16 @@ class Exercicio1HomeActivity : AppCompatActivity() {
             insets
         }
 
-        // Coletando dados da outra activity  ("?.let" verifica se não é nulo)
-        intent.extras?.let {
-            binding.textviewEmail.text = it.getString("EMAIL")
-        }
+        // Chama a Função
+        getUserEmail()
+    }
 
+    // Coletando dados da outra activity  ("?.let" verifica se não é nulo)
+    // Função para Receber Informações do Usuário vindo Exercicio1
+
+    private fun getUserEmail(){
+        intent.extras?.let {
+            binding.textviewEmail.text = it.getString(AppConstants.EMAIL_KEY) // chave "EMAIL" criado em Exercicio1
+        }
     }
 }

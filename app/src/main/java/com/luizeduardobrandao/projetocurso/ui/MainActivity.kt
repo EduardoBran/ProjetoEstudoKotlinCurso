@@ -1,13 +1,13 @@
-package com.luizeduardobrandao.projetocurso
+package com.luizeduardobrandao.projetocurso.ui
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.luizeduardobrandao.projetocurso.R
 import com.luizeduardobrandao.projetocurso.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -31,9 +31,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         // 1. Recupera os botões pelo ID
         binding.btnExercicio1.setOnClickListener(this)
         binding.btnExercicio2.setOnClickListener(this)
-
-
-
     }
 
     // Implementa lógica ao clicar nos botões

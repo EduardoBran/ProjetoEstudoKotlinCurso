@@ -5,16 +5,25 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".ui.Exercicio1HomeActivity">
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"
+        android:text="Usuário Registrado"
+        android:textSize="24sp"
+        android:paddingBottom="16dp"
+        />
 
     <TextView
         android:id="@+id/textview_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:layout_gravity="center"
-        android:layout_marginTop="32dp"
-        android:text="EMAIL"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        />
 
 </LinearLayout>

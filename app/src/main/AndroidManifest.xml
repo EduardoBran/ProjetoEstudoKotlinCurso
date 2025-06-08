@@ -13,10 +13,16 @@
         android:theme="@style/Theme.ProjetoCurso"
         tools:targetApi="31">
         <activity
-            android:name=".Exercicio1HomeActivity"
+            android:name=".ui.Exercicio1RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.activity_exercicio1_register"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Exercicio1HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.MainActivity"
             android:exported="true">
 
             <!-- > Primeira Tela que aplicativo abre -->
@@ -27,10 +33,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Exercicio1"
+            android:name=".ui.Exercicio1"
             android:exported="false" />
         <activity
-            android:name=".Exercicio2"
+            android:name=".ui.Exercicio2"
             android:exported="false" />
 
         <meta-data
